@@ -33,7 +33,7 @@
     <div class="form-control flex items-center space-x-2">
     <div class="bg-[#F4F7FF] rounded-4xl w-[120px] h-[60px] flex items-center justify-center space-x-2">
     <input type="checkbox" checked class="checkbox checkbox-primary" />
-    <span class="text-3xl font-bold text-black px-1 py-1 pb-1 rounded-lg">23</span>
+    <span class="text-3xl font-bold text-black px-1 py-1 pb-1 rounded-lg" id="activityCount">23</span>
     </div>
     <div class="flex justify-center items-center bg-[#F4F7FF] w-[64px] h-[64px] rounded-full" id="color-change-button">
     <img src="assets/theme-btn.png" class=" rounded-full"/>
@@ -54,7 +54,7 @@
       </div>
       <div>
       <p class="text-xl">Task Assigned</p>
-      <h1 class="font-bold text-3xl">05</h1>
+      <h1 class="font-bold text-3xl" id="taskCount">6</h1>
       </div>
       </div>
       <div class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-[524px] h-[125px] pl-8 rounded-2xl flex justify-start items-center space-x-5" id="clicked">
@@ -71,7 +71,7 @@
       </div>
       <div>
       <h3>Wed,<br>
-      <span class="font-bold text-xl">July 28 2025 </span> </h3>
+      <span class="font-bold text-xl" id="date">July 28 2025</span> </h3>
       </div>
       </div>
       </div>
@@ -90,7 +90,7 @@
         </div>
         <div class="flex justify-between ">
         <span class="text-sm  block mt-2"><span class="font-normal text-sm">Deadline</span><br><span class="font-bold text-sm">21 March 2025</span></span>
-        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2">Completed</button>
+        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2" id="completed-btn">Completed</button>
         </div>
         </div>
 
@@ -105,7 +105,7 @@
         </div>
         <div class="flex justify-between ">
         <span class="text-sm  block mt-2"><span class="font-normal text-sm">Deadline</span><br><span class="font-bold text-sm">21 March 2025</span></span>
-        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2">Completed</button>
+        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2" class="completed-btn">Completed</button>
         </div>
         </div>
 
@@ -120,7 +120,7 @@
         </div>
         <div class="flex justify-between ">
         <span class="text-sm  block mt-2"><span class="font-normal text-sm">Deadline</span><br><span class="font-bold text-sm">21 March 2025</span></span>
-        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2">Completed</button>
+        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2" class="completed-btn">Completed</button>
         </div>
         </div>
         </div>
@@ -136,7 +136,7 @@
         </div>
         <div class="flex justify-between ">
         <span class="text-sm  block mt-2"><span class="font-normal text-sm">Deadline</span><br><span class="font-bold text-sm">21 March 2025</span></span>
-        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2">Completed</button>
+        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2" class="completed-btn">Completed</button>
         </div>
         </div>
 
@@ -151,7 +151,7 @@
         </div>
         <div class="flex justify-between ">
         <span class="text-sm  block mt-2"><span class="font-normal text-sm">Deadline</span><br><span class="font-bold text-sm">21 March 2025</span></span>
-        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2">Completed</button>
+        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2" class="completed-btn">Completed</button>
         </div>
         </div>
 
@@ -166,7 +166,7 @@
         </div>
         <div class="flex justify-between ">
         <span class="text-sm  block mt-2"><span class="font-normal text-sm">Deadline</span><br><span class="font-bold text-sm">21 March 2025</span></span>
-        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2">Completed</button>
+        <button class="bg-blue-500 text-white px-4 py-1 rounded-lg mt-2" class="completed-btn">Completed</button>
         </div>
         </div>
         <!--  Task Cards Grid End -->
@@ -211,7 +211,15 @@
         document.getElementById("clicked").onclick = function() {
             window.location.href = "root.html"; 
         };
-    </script>
-    <script src="js/button.js"></script>
-  </body>
+// 3rd-part    
+let presentDate = new Date();
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+let year=presentDate.getFullYear();
+let month=months[presentDate.getMonth()];
+let day=presentDate.getDate();
+let formattedDate=`${month} ${day},${year}`;
+document.getElementById("date").innerText=formattedDate;
+</script>
+<script src="js/button.js"></script>
+</body>
 </html>
