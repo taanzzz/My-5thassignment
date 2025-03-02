@@ -4,12 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My_5th_Assignment</title>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- DaisyUI CDN -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        font-family:'Poppins', sans-serif;
+      }
+    </style>
+
   </head>
   <body class="bg-[#F4F7FF] h-full w-full pt-2">
     <!--DashBoard container-->
@@ -24,8 +35,8 @@
     <input type="checkbox" checked class="checkbox checkbox-primary" />
     <span class="text-3xl font-bold text-black px-1 py-1 pb-1 rounded-lg">23</span>
     </div>
-    <div class="flex justify-center items-center bg-[#F4F7FF] w-[64px] h-[64px] rounded-full">
-    <img src="assets/theme-btn.png" class=" rounded-full" />
+    <div class="flex justify-center items-center bg-[#F4F7FF] w-[64px] h-[64px] rounded-full" id="color-change-button">
+    <img src="assets/theme-btn.png" class=" rounded-full"/>
     </div>
     </div>
     </header>
@@ -46,7 +57,7 @@
       <h1 class="font-bold text-3xl">05</h1>
       </div>
       </div>
-      <div class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-[524px] h-[125px] pl-8 rounded-2xl flex justify-start items-center space-x-5">
+      <div class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] w-[524px] h-[125px] pl-8 rounded-2xl flex justify-start items-center space-x-5" id="clicked">
       <div>
       <img src="assets/board.png">
       </div>
@@ -184,5 +195,23 @@
       </aside>
       <!--Activity Log Sidebar End-->
       </div>
+      <script>
+      // Change Colour-1st js part
+      let colors = ['#E6E6FA','#F5FFFA','#FFB6C1','#87CEEB','#F08080','#FFDAB9','#AFEEEE','#FAFAD2','#FFFACD','#FFFFF0','#F0FFF0','#FFEBCD','#FFFAFA','#20B2AA','#9370DB','#6A5ACD','#BC8F8F','#E9967A','#40E0D0','#708090'];
+      let startWith=0;
+      document.getElementById('color-change-button')
+      .addEventListener('click',function() {
+      document.body.style.backgroundColor=colors[startWith];
+      startWith++;
+      if(startWith>=colors.length){
+        startWith=0;
+      }
+      });
+      // Change Page-2nd part 
+        document.getElementById("clicked").onclick = function() {
+            window.location.href = "root.html"; 
+        };
+    </script>
+    <script src="js/button.js"></script>
   </body>
 </html>

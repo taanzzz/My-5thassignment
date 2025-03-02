@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My_5th_Assignment</title>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      body {
+        font-family:'Poppins', sans-serif;
+      }
+    </style>
+
+  </head>
+  <body class="bg-[#F4F7FF] h-screen w-full pt-2">
+    <!--Navbar Start -->
+    <header class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+    <div class="flex items-center">
+    <img src="assets/logo.png" class="mr-4" />
+    <h2 class="text-2xl font-bold"><span class="font-normal">Dev</span><span class="font-bold">board</span></h2>
+    </div>
+    <div>
+    <button class="bg-blue-500 text-white px-4 py-1 rounded-sm mt-2"id="back">Back to Desk</button>
+    </div>
+    </header>
+    <!--Navbar End -->
+    <main>
+        <h1 class="flex justify-center items-center font-bold text-xl mt-2">Blogs</h1>
+        <div class="space-y-5">
+        <div class="space-y-1 mt-3">
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+        <h1 class="text-sm font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+            There are several ways to select elements from the DOM:We can select a specific element by ID,multiple elements by class,all elements of a certain tag by tag name,the first matching element with querySelector() and all matching elements with querySelectorAll().
+        </div>
+        </div>
+        
+        <div class="space-y-1 mt-3">
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+        <h1 class="text-sm font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+            innerHTML returns everything including HTML content,innerText gives only the visible text and textContent returns all the text,including hidden text.
+        </div>
+        </div>
+        
+        <div class="space-y-1 mt-3">
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+        <h1 class="text-sm font-bold">Question-3: What is event delegation in the DOM?</h1>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+           Event delegation is when I add an event listener to a parent element,which handles events for its child elements. 
+        </div>
+        </div>
+
+        <div class="space-y-1 mt-3">
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+        <h1 class="text-sm font-bold">Question-4: What is event bubbling in the DOM?</h1>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+            Event bubbling is when an event starts from a child element and then bubbles up to its parent elements.
+        </div>
+        </div>
+
+        <div class="space-y-1 mt-3">
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+        <h1 class="text-sm font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+        </div>
+        <div class="bg-[#FFFFFF] shadow-md p-4 rounded-2xl flex justify-between items-center  ml-36 mr-36">
+            In JavaScript,I use createElement() to create a new element and appendChild() to add it to a parent.To remove an element,I use removeChild().
+        </div>
+        </div>
+        </div>
+    </main>
+    <script>
+    document.getElementById("back").onclick = function() {
+            window.location.href = "index.html"; 
+        };
+    </script>
+    <script src="js/button.js"></script>
+  </body>
+</html>
